@@ -1,0 +1,36 @@
+
+.home-container {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+}
+
+.home-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.home-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.home-container button {
+  padding: 12px 25px;
+  background: white;
+  color: #0072ff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-container button:hover {
+  background: #0072ff;
+  color: white;
+}
