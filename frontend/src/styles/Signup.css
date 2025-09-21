@@ -1,26 +1,35 @@
+/* Full-screen centered container */
 .signup-container {
   display: flex;
+  
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
+  background: rgb(108, 108, 228);
   font-family: Arial, sans-serif;
+  padding: 1rem;           /* Prevents content from sticking on edges */
+  box-sizing: border-box;
 }
 
+/* Signup card */
 .signup-box {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 320px;
+  width: 100%;
+  max-width: 400px;        /* Limit width for large screens */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
+/* Title */
 .signup-box h2 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 1.5rem;
 }
 
+/* Input fields */
 .signup-box input {
   width: 100%;
   padding: 12px;
@@ -29,6 +38,8 @@
   border-radius: 8px;
   outline: none;
   transition: 0.3s;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .signup-box input:focus {
@@ -36,6 +47,7 @@
   box-shadow: 0 0 5px #2575fc;
 }
 
+/* Signup button */
 .signup-box button {
   width: 100%;
   padding: 12px;
@@ -51,4 +63,60 @@
 
 .signup-box button:hover {
   background: #6a11cb;
+}
+
+/* Extra text (e.g., "Already have an account?") */
+.signup-box p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.signup-box a {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 20px;
+    max-width: 320px;
+  }
+
+  .signup-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .signup-box input,
+  .signup-box button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 15px;
+    max-width: 280px;
+  }
+
+  .signup-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .signup-box input,
+  .signup-box button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .signup-box p {
+    font-size: 0.85rem;
+  }
 }

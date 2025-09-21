@@ -1,27 +1,34 @@
-
+/* Full-screen centered container */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff512f 0%, #dd2476 100%);
+  min-height:100vh;
+  background: lightblue;
   font-family: Arial, sans-serif;
+  padding: 1rem;           /* Prevents content from sticking to edges */
+  box-sizing: border-box;
 }
 
+/* Login card */
 .login-box {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 320px;
+  width: 100%;
+  max-width: 400px;       /* Limits width on large screens */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
+/* Heading */
 .login-box h2 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 1.5rem;
 }
 
+/* Input fields */
 .login-box input {
   width: 100%;
   padding: 12px;
@@ -30,6 +37,8 @@
   border-radius: 8px;
   outline: none;
   transition: 0.3s;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .login-box input:focus {
@@ -37,10 +46,11 @@
   box-shadow: 0 0 5px #dd2476;
 }
 
+/* Login button */
 .login-box button {
   width: 100%;
   padding: 12px;
-  background: #dd2476;
+  background: lightblue;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -52,4 +62,60 @@
 
 .login-box button:hover {
   background: #ff512f;
+}
+
+/* Signup text */
+.login-box p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-box a {
+  color: #dd2476;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 20px;
+    max-width: 320px;
+  }
+
+  .login-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 15px;
+    max-width: 280px;
+  }
+
+  .login-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .login-box p {
+    font-size: 0.85rem;
+  }
 }

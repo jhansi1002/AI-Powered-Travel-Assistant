@@ -15,18 +15,11 @@ function Home() {
       navigate("/login");
     }
   }, [navigate]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("expiry");
-    navigate("/login");
-  };
-
   return (
     <div className="home-container">
       <h2>🌍 AI-Powered Travel Assistant</h2>
       <p>Welcome! You are logged in successfully 🎉</p>
-      <button onClick={handleLogout}>Logout</button>
+      
     </div>
   );
 }

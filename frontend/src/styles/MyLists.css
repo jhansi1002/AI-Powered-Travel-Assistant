@@ -1,0 +1,38 @@
+.my-lists-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.my-lists-container h2 {
+  color: #2575fc;
+  margin-bottom: 15px;
+}
+
+.lists {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f2f2f2;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.list-item:hover {
+  background: #e0eaff;
+}
+
+.list-name {
+  font-weight: 500;
+}
+
+.list-date {
+  font-size: 0.9rem;
+  color: #555;
+}
