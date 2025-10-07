@@ -16,11 +16,14 @@ function Login() {
         password,
       });
 
-      // Save token + expiry in localStorage
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("expiry", Date.now() + 2 * 60 * 60 * 1000); // 2 hours
+  // Save token + expiry + user info in localStorage
+  localStorage.setItem("token", res.data.token);
+  localStorage.setItem("expiry", Date.now() + 2 * 60 * 60 * 1000); // 2 hours
+  // Save user info if returned from backend
+  if (res.data.name) localStorage.setItem("userName", res.data.name);
+  if (res.data.email) localStorage.setItem("userEmail", res.data.email);
 
-      navigate("/home");
+  navigate("/home");
     } catch (err) {
       alert("Login failed. Try again.");
     }

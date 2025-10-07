@@ -1,38 +1,119 @@
+/* MyLists.css - Improved UI for bucket/visited lists */
 .my-lists-container {
-  padding: 20px;
-  max-width: 800px;
+  padding: 32px 16px;
+  max-width: 900px;
   margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
-.my-lists-container h2 {
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.add-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #f7f7f7;
+}
+
+.add-form button {
+  padding: 10px 18px;
+  background: #2575fc;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-form button:hover {
+  background: #6a11cb;
+}
+
+.lists-grid {
+  display: flex;
+  gap: 32px;
+}
+
+.list-section {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 18px 12px;
+  border-radius: 10px;
+  min-height: 220px;
+  background: #f9f9ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.list-section h3 {
+  text-align: center;
+  margin-bottom: 16px;
   color: #2575fc;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
-.lists {
-  list-style-type: none;
+.list-section ul {
+  list-style: none;
   padding: 0;
 }
 
-.list-item {
+.list-section li {
   display: flex;
   justify-content: space-between;
-  background: #f2f2f2;
+  align-items: center;
   margin-bottom: 10px;
-  padding: 12px 15px;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 8px 10px;
+}
+
+.list-section li span {
+  flex: 1;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.list-section li input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #2575fc;
+}
+
+.list-section li button {
+  margin-left: 6px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #2575fc;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
   transition: background 0.2s;
 }
-
-.list-item:hover {
-  background: #e0eaff;
+.list-section li button:hover {
+  background: #6a11cb;
 }
 
-.list-name {
-  font-weight: 500;
-}
-
-.list-date {
-  font-size: 0.9rem;
-  color: #555;
+@media (max-width: 768px) {
+  .lists-grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .add-form {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
